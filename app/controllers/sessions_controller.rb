@@ -12,13 +12,16 @@ class SessionsController < ApplicationController
       render 'new'
     else
       sign_in user
-      flash[:error] = "Signed in!"
-      redirect_to user
+      redirect_back_or user
     end
   end
   
   def destroy
     sign_out
     redirect_to root_path
+  end
+  
+  def deny_access
+    redirect_to signin_path, :notice => "Please sign in to access this page."
   end
 end
