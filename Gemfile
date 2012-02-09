@@ -8,7 +8,6 @@ gem 'rails', '3.2.1'
 gem 'sqlite3'
 gem 'gravatar_image_tag'
 gem 'json'
-gem 'activerecord-postgresql-adapter'
 
 # Gems used only for assets and not required
 # in production environments by default.
@@ -25,6 +24,11 @@ end
 group :development do
   gem 'annotate', 
 :git => 'git://github.com/jeremyolliver/annotate_models.git', :branch => 'rake_compatibility'
+end
+
+group :production do
+  # gems specifically for Heroku go here
+  gem "pg"
 end
 
 gem 'jquery-rails'
