@@ -7,6 +7,7 @@ gem 'rails', '3.2.1'
 
 gem 'sqlite3'
 gem 'gravatar_image_tag'
+gem 'will_paginate'
 gem 'json'
 
 # Gems used only for assets and not required
@@ -24,6 +25,7 @@ end
 group :development do
   gem 'annotate', 
 :git => 'git://github.com/jeremyolliver/annotate_models.git', :branch => 'rake_compatibility'
+  gem 'faker', '0.3.1'
 end
 
 group :production do
