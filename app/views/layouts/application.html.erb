@@ -4,14 +4,20 @@
 	<title><%= title %></title>
 	<%= csrf_meta_tags %>
 	<%= render 'layouts/stylesheets' %>
+	<%= javascript_include_tag "application" %>
 </head>
 <body>
+	<div class="flashbar">	
+		<% flash.each do |key, value| %>
+			<div id="flash_1" class="flash <%= key %>"><%= value %></div>
+			<script>
+				//$('#flash_1').delay(1800).slideUp(400)
+			</script>
+		<% end %>
+	</div>
 	<div class="container"> 
 		<%= render 'layouts/header' %>
 		<section class="round">
-			<% flash.each do |key, value| %>
-			<div class="flash <%= key %>"><%= value %></div>
-			<% end %>
 			<%= yield %> 
 		</section>
 		<%= render 'layouts/footer' %>
