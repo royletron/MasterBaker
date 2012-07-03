@@ -1,0 +1,44 @@
+!!! 5
+/[if lt IE 7 ] <html lang="en" class="no-js ie6">
+/[if IE 7 ] <html lang="en" class="no-js ie7">
+/[if IE 8 ] <html lang="en" class="no-js ie8">
+/[if IE 9 ] <html lang="en" class="no-js ie9">
+/ [if (gt IE 9)|!(IE)]><!
+%html.no-js{:xmlns => "http://www.w3.org/1999/xhtml", :"xml:lang" => "en", :lang => "en"}
+  / <![endif]
+  %head
+    %title= title
+
+    %meta{:"http-equiv" => "Content-Type", :content => "text/html; charset=utf-8"}
+    %meta{:"http-equiv" => "X-UA-Compatible", :content => "IE=9"}
+    
+    %meta{:name=> "viewport", :content=> "width=device-width, initial-scale=1.0"}
+    
+    %link{:rel=>"icon", :href=>"/assets/favicon.ico", :type=>"image/x-icon"}
+    %link{:rel=>"shortcut icon", :href=>"/assets/favicon.ico", :type=>"image/x-icon"}
+    
+
+    - if ENV["RAILS_ENV"] != "production"
+      = stylesheet_link_tag "abootstrap"
+      = stylesheet_link_tag "bootstrap-responsive"
+
+
+    = csrf_meta_tags
+    
+    = javascript_include_tag "head"
+    
+    = yield :head
+  
+  %body
+    
+    = render :partial => "layouts/header"
+    
+    #content.container
+      = content_for?(:content) ? yield(:content) : yield
+      
+    %div{:id=>"popup_window", :class=>"popup_window"}
+    
+    - if ENV["RAILS_ENV"] == "production"
+      = stylesheet_link_tag "abootstrap"
+      = stylesheet_link_tag "bootstrap-responsive"
+      
