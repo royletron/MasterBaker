@@ -157,14 +157,12 @@ textarea {
 
 body {
   margin: 0;
-  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-family: "Verdana", Helvetica, Arial, sans-serif;
   font-size: 13px;
   line-height: 18px;
   background-color: #fff;
-  background-image: url(/assets/grid-18px-masked.png);
-  background-repeat: repeat-x;
-  background-position: 0 40px;
-  padding-top:50px;
+  background-image: url(/assets/mb-tile.png);
+  padding-top:85px;
 }
 
 a {
@@ -461,10 +459,15 @@ h6 small {
   font-weight: normal;
   color: #999999;
 }
-
+@font-face {
+  font-family: Point;
+  src: url('/assets/point.ttf');
+}
 h1 {
-  font-size: 30px;
-  line-height: 36px;
+  font-size: 36px;
+  line-height: 40px;
+  font-family: Point;
+  color:#8488af;
 }
 
 h1 small {
@@ -3596,17 +3599,17 @@ input[type="submit"].btn.btn-mini {
   padding-right: 20px;
   padding-left: 20px;
   background-color: #fffbdc;
-  background-image: -moz-linear-gradient(top, #fffff5, #fffbdc);
-  background-image: -ms-linear-gradient(top, #fffff5, #fffbdc);
-  background-image: -webkit-gradient(linear, 0 0, 0 100%, from(#fffff5), to(#fffbdc));
-  background-image: -webkit-linear-gradient(top, #fffff5, #fffbdc);
-  background-image: -o-linear-gradient(top, #fffff5, #fffbdc);
-  background-image: linear-gradient(top, #fffff5, #fffbdc);
+  background-image: -moz-linear-gradient(top, #fafafa, #f9f9f9);
+  background-image: -ms-linear-gradient(top, #fafafa, #f9f9f9);
+  background-image: -webkit-gradient(linear, 0 0, 0 100%, from(#fafafa), to(#f9f9f9));
+  background-image: -webkit-linear-gradient(top, #fafafa, #f9f9f9);
+  background-image: -o-linear-gradient(top, #fafafa, #f9f9f9);
+  background-image: linear-gradient(top, #fafafa, #f9f9f9);
   background-repeat: repeat-x;
   -webkit-border-radius: 4px;
      -moz-border-radius: 4px;
           border-radius: 4px;
-  filter: progid:dximagetransform.microsoft.gradient(startColorstr='#333333', endColorstr='#222222', GradientType=0);
+  filter: progid:dximagetransform.microsoft.gradient(startColorstr='#fafafa', endColorstr='#f9f9f9', GradientType=0);
   -webkit-box-shadow: 0 1px 3px rgba(0, 0, 0, 0.25), inset 0 -1px 0 rgba(0, 0, 0, 0.1);
      -moz-box-shadow: 0 1px 3px rgba(0, 0, 0, 0.25), inset 0 -1px 0 rgba(0, 0, 0, 0.1);
           box-shadow: 0 1px 3px rgba(0, 0, 0, 0.25), inset 0 -1px 0 rgba(0, 0, 0, 0.1);
@@ -3808,7 +3811,7 @@ input[type="submit"].btn.btn-mini {
 .navbar .nav > li > a {
   float: none;
   padding: 9px 10px 11px;
-  line-height: 30px;
+  line-height: 38px;
   color: #e74e7a;
   text-decoration: none;
   text-shadow: 0 -1px 0 rgba(255, 236, 34, 0.25);
