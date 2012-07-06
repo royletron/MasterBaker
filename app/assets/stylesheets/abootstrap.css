@@ -161,7 +161,9 @@ body {
   font-size: 13px;
   line-height: 18px;
   background-color: #fff;
-  background-image: url(/assets/mb-tile.png);
+  background: #000 url(/assets/big-bg.jpg) center center fixed no-repeat;
+  -moz-background-size: cover;
+  background-size: cover;
   padding-top:85px;
 }
 
@@ -446,7 +448,7 @@ h6 {
   margin: 0;
   font-family: inherit;
   font-weight: bold;
-  color: inherit;
+  color: #8488AF;
   text-rendering: optimizelegibility;
 }
 
@@ -2509,6 +2511,7 @@ table .span24 {
   margin-bottom: 20px;
   background-color: #f5f5f5;
   border: 1px solid #eee;
+  opacity:0.9;
   border: 1px solid rgba(0, 0, 0, 0.05);
   -webkit-border-radius: 4px;
      -moz-border-radius: 4px;
@@ -4961,6 +4964,7 @@ a.badge:hover {
   padding: 60px;
   margin-bottom: 30px;
   background-color: #eeeeee;
+  opacity:0.9;
   -webkit-border-radius: 6px;
      -moz-border-radius: 6px;
           border-radius: 6px;
