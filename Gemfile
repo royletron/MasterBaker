@@ -10,7 +10,6 @@ gem 'gravatar_image_tag'
 gem 'will_paginate'
 gem 'json'
 gem 'nokogiri'
-gem 'therubyracer'
 gem 'formtastic'
 gem 'formtastic-bootstrap', :git => 'https://github.com/niedfelj/formtastic-bootstrap.git', :branch => 'bootstrap2-rails3-2-formtastic-2-2'
 gem "mysql2", "~> 0.3.11"
