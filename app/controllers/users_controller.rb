@@ -1,3 +1,5 @@
+require 'digest'
+require 'base64'
 class UsersController < ApplicationController
 
   def index
@@ -21,8 +23,11 @@ class UsersController < ApplicationController
   
   def create
     @user = User.new(params[:user])
+    confirmation = Base64::encode64(@user.email)
+    @user.confirm_code = confirmation
     respond_to do |format|  
       if @user.save
+        UserMailer.welcome_email(@user).deliver
         flash[:notice] = "Account created, go check your emails!"
         format.html { redirect_to root_path}
         format.xml  { head :ok }
