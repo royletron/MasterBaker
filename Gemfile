@@ -9,6 +9,9 @@ gem 'sqlite3'
 gem 'gravatar_image_tag'
 gem 'will_paginate'
 gem 'json'
+gem 'nokogiri'
+gem 'formtastic'
+gem 'formtastic-bootstrap', :git => 'https://github.com/niedfelj/formtastic-bootstrap.git', :branch => 'bootstrap2-rails3-2-formtastic-2-2'
 
 # Gems used only for assets and not required
 # in production environments by default.

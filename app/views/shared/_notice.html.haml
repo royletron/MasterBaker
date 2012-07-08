@@ -1,0 +1,6 @@
+- if flash[:notice]
+  .container
+    .alert.alert-box.alert-success.fade.in
+      %a.close{"data-dismiss" => "alert"} x
+      %strong Update
+      =flash[:notice]

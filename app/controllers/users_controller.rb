@@ -23,6 +23,7 @@ class UsersController < ApplicationController
     @user = User.new(params[:user])
     respond_to do |format|  
       if @user.save
+        flash[:notice] = "Account created, go check your emails!"
         format.html { redirect_to root_path}
         format.xml  { head :ok }
       else  

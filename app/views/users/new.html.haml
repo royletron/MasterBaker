@@ -4,29 +4,16 @@
       %h1 Sign up!
       %p Get involved fool.
   .span7.well
-    =form_for @user, {:url=> user_path(@user), :method=> "post", :html => { :class => "form-horizontal"} } do |f|
+    -if @user.errors.any?
+      %p Errr there is something wrong!
+    =semantic_form_for @user, {:url=> user_path(@user), :method=> "post", :html => { :class => "form-horizontal"} } do |f|
       %legend
         %h1 Yo' details!
-      .control-group
-        %label.control-label Name
-        .controls
-          =f.text_field :name, :class=>"input-large", :title=>"Name", :placeholder=>"Your real name!"
-      .control-group
-        %label.control-label Nickname
-        .controls
-          =f.text_field :username, :class=>"input-large", :title=>"Nickname", :placeholder=>"You can change it later"
-      .control-group
-        %label.control-label Email
-        .controls
-          =f.text_field :email, :class=>"input-large", :title=>"Email", :placeholder=>"Must be @oup.com"
-      .control-group
-        %label.control-label Password
-        .controls
-          =f.text_field :password, :class=>"input-large", :title=>"Password", :placeholder=>"Keep it safe!"
-      .control-group
-        %label.control-label Confirm Password
-        .controls
-          =f.text_field :password_confirmation, :class=>"input-large", :title=>"Password Confirm", :placeholder=>"Be sure!"
+      =f.input :name, :input_html => { :class=>"input-large" }, :title=>"Name", :placeholder=>"Your real name!"
+      =f.input :username, :input_html => { :class=>"input-large" }, :title=>"Nickname", :placeholder=>"You can change it later"
+      =f.input :email, :input_html => { :class=>"input-large" }, :title=>"Email", :placeholder=>"Must be @oup.com"
+      =f.input :password, :input_html => { :class=>"input-large" }, :title=>"Password", :placeholder=>"Keep it safe!"
+      =f.input :password_confirmation, :input_html => { :class=>"input-large" }, :title=>"Password Confirm", :placeholder=>"Be sure!"
           
       .form-actions
         =submit_tag "Sign me up", :class => "btn btn-primary"

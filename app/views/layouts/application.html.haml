@@ -16,11 +16,13 @@
     
     %link{:rel=>"icon", :href=>"/assets/favicon.ico", :type=>"image/x-icon"}
     %link{:rel=>"shortcut icon", :href=>"/assets/favicon.ico", :type=>"image/x-icon"}
+    %script{:src=>"http://code.jquery.com/jquery-1.7.2.min.js", :type=>"text/javascript"}
     
 
     - if ENV["RAILS_ENV"] != "production"
       = stylesheet_link_tag "abootstrap"
       = stylesheet_link_tag "bootstrap-responsive"
+      = javascript_include_tag "bootstrap-alert.js"
 
 
     = csrf_meta_tags
@@ -31,6 +33,10 @@
     
     = render :partial => "layouts/header"
     
+    
+    =render :partial =>"shared/warning"
+    =render :partial =>"shared/notice"
+    
     #content.container
       = content_for?(:content) ? yield(:content) : yield
       
@@ -39,4 +45,5 @@
     - if ENV["RAILS_ENV"] == "production"
       = stylesheet_link_tag "abootstrap"
       = stylesheet_link_tag "bootstrap-responsive"
+      = javascript_include_tag "bootstrap-alert.js"
       

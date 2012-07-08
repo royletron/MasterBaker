@@ -1,0 +1,6 @@
+- if flash[:warning].present?
+  .container
+    .alert.alert-error.alert-box.fade.in
+      %a.close{"data-dismiss" => "alert"} x
+      %strong Warning
+      =flash[:warning]

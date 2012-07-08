@@ -449,7 +449,6 @@ h6 {
   margin: 0;
   font-family: inherit;
   font-weight: bold;
-  color: #8488AF;
   text-rendering: optimizelegibility;
 }
 
@@ -470,7 +469,6 @@ h1 {
   font-size: 36px;
   line-height: 40px;
   font-family: Point;
-  color:#8488af;
 }
 
 h1 small {
