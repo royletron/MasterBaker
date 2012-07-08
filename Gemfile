@@ -13,6 +13,7 @@ gem 'nokogiri'
 gem 'therubyracer'
 gem 'formtastic'
 gem 'formtastic-bootstrap', :git => 'https://github.com/niedfelj/formtastic-bootstrap.git', :branch => 'bootstrap2-rails3-2-formtastic-2-2'
+gem 'faker'
 
 # Gems used only for assets and not required
 # in production environments by default.
@@ -28,7 +29,6 @@ end
 group :development do
   gem 'annotate', 
 :git => 'git://github.com/jeremyolliver/annotate_models.git', :branch => 'rake_compatibility'
-  gem 'faker'
 end
 
 group :production do
