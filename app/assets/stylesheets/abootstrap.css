@@ -162,6 +162,7 @@ body {
   line-height: 18px;
   background-color: #fff;
   background: #000 url(/assets/big-bg.jpg) center center fixed no-repeat;
+  text-shadow: 2.5px 2.5px 2.5px rgba(255, 255, 255, 1);
   -moz-background-size: cover;
   background-size: cover;
   padding-top:85px;
