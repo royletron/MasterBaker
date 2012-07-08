@@ -13,7 +13,8 @@ gem 'nokogiri'
 gem 'therubyracer'
 gem 'formtastic'
 gem 'formtastic-bootstrap', :git => 'https://github.com/niedfelj/formtastic-bootstrap.git', :branch => 'bootstrap2-rails3-2-formtastic-2-2'
-gem 'faker'
+gem "mysql2", "~> 0.3.11"
+gem "mysql"
 
 # Gems used only for assets and not required
 # in production environments by default.
