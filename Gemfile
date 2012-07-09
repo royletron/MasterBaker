@@ -5,7 +5,8 @@ gem 'rails', '3.2.1'
 # Bundle edge Rails instead:
 # gem 'rails', :git => 'git://github.com/rails/rails.git'
 
-gem 'tap'
+gem 'paperclip'
+gem 'aws-s3'
 gem 'will_paginate'
 gem 'json'
 gem 'nokogiri'

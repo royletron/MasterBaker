@@ -1,7 +1,14 @@
 require 'digest'
 class User < ActiveRecord::Base
   attr_accessor :password
-  attr_accessible :name, :email, :username, :admin, :superadmin, :god, :password, :password_confirmation
+  attr_accessible :name, :email, :username, :admin, :superadmin, :god, :password, :password_confirmation, :avatar
+  
+  has_attached_file :avatar, :styles => { :medium => "300x300>", :thumb => "100x100>" }, 
+                    :storage => :s3,
+                    :bucket => ENV['S3_BUCKET_NAME'],
+                    :s3_credentials => {
+                    :access_key_id => ENV['AWS_ACCESS_KEY_ID'],
+                    :secret_access_key => ENV['AWS_SECRET_ACCESS_KEY'] }
   
   email_regex = /\A[\w+\-.]+@oup.com+\z/i
   
