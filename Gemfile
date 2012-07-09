@@ -7,6 +7,7 @@ gem 'rails', '3.2.1'
 
 gem 'paperclip'
 gem 'aws-s3'
+gem 'aws-sdk'
 gem 'will_paginate'
 gem 'json'
 gem 'nokogiri'
