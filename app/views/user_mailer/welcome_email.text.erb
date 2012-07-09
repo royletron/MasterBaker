@@ -1,9 +1,10 @@
-Welcome to example.com, <%= @user.name %>
+Welcome to Masterbaker
 ===============================================
  
-You have successfully signed up to example.com,
-your username is: <%= @user.login %>.
+You have successfully signed up to Masterbaker,
+your username is: <%= @user.username %>.
  
-To login to the site, just follow this link: <%= @url %>.
+To confirm your account follow the link: 
+http://localhost:3000/confirm/<%= @user.confirm_code %>&<%= @user.email %>
  
 Thanks for joining and have a great day!
