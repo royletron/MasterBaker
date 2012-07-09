@@ -6,8 +6,8 @@ class AddConfirmationToUsers < ActiveRecord::Migration
 
   end
   def down
-    add_column :users, :confirmed, :boolean
+    remove_column :users, :confirmed, :boolean
 
-    add_column :users, :confirm_code, :string
+    remove_column :users, :confirm_code, :string
   end
 end

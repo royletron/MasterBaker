@@ -5,6 +5,8 @@ MasterBaker::Application.routes.draw do
   match '/help', :to => 'pages#help'
   match '/lame', :to => 'pages#lame'
   
+  match '/confirm/account', :to => 'confirm#account'
+  
   resource :user
   # The priority is based upon order of creation:
   # first created -> highest priority.

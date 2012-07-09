@@ -10,7 +10,7 @@
       your username is: <%= @user.username %>.<br/>
     </p>
     <p>
-      To confirm your account click the link: <a href="http://localhost:3000/confirm/<%= @user.confirm_code %>&<%= @user.email %>">here!</a>.
+      To confirm your account click the link: <a href="http://localhost:3000/confirm/account?code=<%= @user.confirmcode %>&email=<%= @user.email %>">here!</a>.
     </p>
     <p>Thanks for joining and have a great day!</p>
   </body>
