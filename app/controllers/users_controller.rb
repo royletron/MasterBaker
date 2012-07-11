@@ -7,7 +7,7 @@ class UsersController < ApplicationController
 
   def edit
      @user = User.find(params[:id])
-     render :show
+     @title = "Edit" + @user.username;
   end
 
   def show
@@ -37,4 +37,16 @@ class UsersController < ApplicationController
     end
   end
   
+  def update
+    @user = User.find(params[:user][:id])
+    params[:user].delete(:password) if params[:user][:password].blank?
+    params[:user].delete(:password_confirmation) if params[:user][:password_confirmation].blank?
+    if @user.update_attributes(params[:user])
+      flash[:notice] = "Profile updated."
+      redirect_to root_path
+    else
+      @title = "Edit user"
+      render 'edit'
+    end
+  end
 end
