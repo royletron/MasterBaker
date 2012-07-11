@@ -1,0 +1,21 @@
+.row-fluid
+  .span5
+    .hero-unit
+      %h1 Sign up!
+      %p Get involved fool.
+  .span7.well
+    -if @user.errors.any?
+      %p Errr there is something wrong!
+    =semantic_form_for @user, {:url=> @user.new_record? ? root_path : root_path, :method=> @user.new_record? ? "post" : "put", :html => { :class => "form-horizontal"} } do |f|
+      %legend
+        %h1 Yo' details!
+      -if not @user.new_record?
+        =f.input :id, :as => :hidden
+      =f.input :name, :input_html => { :class=>"input-large" }, :title=>"Name", :placeholder=>"Your real name!"
+      =f.input :username, :input_html => { :class=>"input-large" }, :title=>"Nickname", :placeholder=>"You can change it later"
+      =f.input :email, :input_html => { :class=>"input-large" }, :title=>"Email", :placeholder=>"Must be @oup.com"
+      =f.input :password, :input_html => { :class=>"input-large" }, :title=>"Password", :placeholder=>"Keep it safe!"
+      =f.input :password_confirmation, :input_html => { :class=>"input-large" }, :title=>"Password Confirm", :placeholder=>"Be sure!"
+          
+      .form-actions
+        =submit_tag "Sign me up", :class => "btn btn-primary"

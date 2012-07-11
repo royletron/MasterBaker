@@ -1,0 +1,16 @@
+.row-fluid
+  .span5
+    .hero-unit
+      %h1 Log in!
+      %p And get makin' and bakin'.
+  .span7.well
+    =semantic_form_for :session, {:url=> sessions_path, :method=> "post", :html => { :class => "form-horizontal"} } do |f|
+      %legend
+        %h1 Yo' details!
+      =f.input :email, :input_html => { :class=>"input-large" }, :title=>"Name"
+      =f.input :password, :input_html => { :class=>"input-large" }, :title=>"Password"
+          
+      .form-actions>
+        =submit_tag "Log in", :class => "btn btn-primary", :style=>"float:left;"
+        %a.btn.btn-danger{:style=>"float:left; margin-left:5px;", :href=>"/user/new"} Forgot password!
+        %a.btn.btn-success{:style=>"float:left; margin-left:5px;", :href=>"/user/new"} Sign up
