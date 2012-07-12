@@ -14,15 +14,19 @@
             %a{:href => '/contact' , :class=>"first_menu_linkers"} Contact
           -if not signed_in?
             %li
-              %a{:href => '/signin', :class => "first_menu_linkers"} Login
+              %a{:href => signin_path, :class => "first_menu_linkers"} Login
       -if signed_in?
         .nav.pull-right
           %ul.nav
             %li.dropdown.pull-right
               %a.dropdown-toggle{:href=>"#", "data-toggle"=>"dropdown"}
+                =image_tag current_user.avatar.url(:tiny)
                 =current_user.username
                 %b.caret
               %ul.dropdown-menu
                 %li
-                  %a{:href => 'signout'} 
+                  %a{:href => signout_path} 
                     Log out
+                %li
+                  %a{:href => edit_user_path(:id=>current_user.id)}
+                    Update profile
