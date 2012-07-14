@@ -175,7 +175,7 @@ body {
 	z-index:-1;
 	margin-top:-20px;
 	padding-top:40px;
-  background: #000 url(/assets/profile-tile.png);
+  background: #000 url(/assets/profile-tile.png) center bottom fixed repeat-x;
 	color:black;
 }
 
