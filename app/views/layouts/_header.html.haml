@@ -1,17 +1,11 @@
 %div.navbar.navbar-fixed-top
-
   .navbar-inner
     .container
       %a.brand{:href => root_path}
         %img{:src => "/assets/mb-logo.png"}
       .nav
         %ul.nav
-          %li
-            %a{:href => '/about' , :class=>"first_menu_linkers"} About 
-          %li
-            %a{:href => '/help' , :class=>"first_menu_linkers"} Help
-          %li
-            %a{:href => '/contact' , :class=>"first_menu_linkers"} Contact
+          =render :partial => '/layouts/standardpages'
           -if not signed_in?
             %li
               %a{:href => signin_path, :class => "first_menu_linkers"} Login
@@ -30,3 +24,5 @@
                 %li
                   %a{:href => edit_user_path(:id=>current_user.id)}
                     Update profile
+  
+  = yield :noncontent

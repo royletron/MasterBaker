@@ -11,8 +11,14 @@ class SessionsController < ApplicationController
       @title = "Sign in"
       render 'new'
     else
-      sign_in user
-      redirect_to root_path
+      if user.confirmed == 0
+        flash.now[:warning] = "That account hasn't been confirmed."
+        @title = "Sign in"
+        render 'new'
+      else
+        sign_in user
+        redirect_back_or user
+      end
     end
   end
   
