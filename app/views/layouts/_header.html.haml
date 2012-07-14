@@ -4,9 +4,18 @@
       %a.brand{:href => root_path}
         %img{:src => "/assets/mb-logo.png"}
       .nav
-        %ul.nav
-          =render :partial => '/layouts/standardpages'
-          -if not signed_in?
+        -if not signed_in?
+          %ul.nav.visible-phone
+            %li.dropdown.pull-right
+              %a.dropdown-toggle{:href=>"#", "data-toggle"=>"dropdown"}
+                About
+                %b.caret
+              %ul.dropdown-menu
+                =render :partial => '/layouts/standardpages'
+                %li
+                  %a{:href => signin_path, :class => "first_menu_linkers"} Login
+          %ul.nav.hidden-phone
+            =render :partial => '/layouts/standardpages'
             %li
               %a{:href => signin_path, :class => "first_menu_linkers"} Login
       -if signed_in?
@@ -14,15 +23,21 @@
           %ul.nav
             %li.dropdown.pull-right
               %a.dropdown-toggle{:href=>"#", "data-toggle"=>"dropdown"}
+                About
+                %b.caret
+              %ul.dropdown-menu
+                =render :partial => '/layouts/standardpages'
+            %li.dropdown.pull-right
+              %a.dropdown-toggle{:href=>"#", "data-toggle"=>"dropdown"}
                 =image_tag current_user.avatar.url(:tiny)
                 =current_user.username
                 %b.caret
-              %ul.dropdown-menu
+              %ul.dropdown-menu  
+                %li
+                  %a{:href => user_path(:id=>current_user.id)}
+                    Profile
                 %li
                   %a{:href => signout_path} 
                     Log out
-                %li
-                  %a{:href => edit_user_path(:id=>current_user.id)}
-                    Update profile
   
   = yield :noncontent
