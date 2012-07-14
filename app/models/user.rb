@@ -3,7 +3,7 @@ class User < ActiveRecord::Base
   attr_accessor :password
   attr_accessible :name, :email, :username, :admin, :superadmin, :god, :password, :password_confirmation, :avatar
   
-  has_attached_file :avatar, :styles => { :medium => "300x300>", :thumb => "100x100>", :tiny => "40x40>" }, 
+  has_attached_file :avatar, :styles => { :medium => "160x160>", :thumb => "100x100>", :tiny => "40x40>" }, 
                     :storage => :s3,
                     :bucket         => ENV['S3_BUCKET'],
                     :s3_credentials => { :access_key_id     => ENV['AWS_ACCESS_KEY_ID'], 
