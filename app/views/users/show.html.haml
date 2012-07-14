@@ -3,9 +3,9 @@
     .container
       .row-fluid
         .span6
-          .well.smaller.visible-phone{:style => "background-image:url(http://s3.amazonaws.com/masterbaker_pics/users/avatars/000/000/001/thumb/d.jpg?1342118311);"}
+          .well.smaller.visible-phone{:style => "background-image:url(#{current_user.avatar.url(:thumb)});"}
             %h1
               =@user.name
-          .well.hidden-phone{:style => "background-image:url(http://s3.amazonaws.com/masterbaker_pics/users/avatars/000/000/001/profile/d.jpg?1342118311);"}
+          .well.larger.hidden-phone{:style => "background-image:url(#{current_user.avatar.url(:medium)});"}
             %h1
               =@user.name

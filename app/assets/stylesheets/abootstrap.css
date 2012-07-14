@@ -2518,8 +2518,6 @@ table .span24 {
 	background-color: #fafafa;
   opacity:1;
   background-repeat: no-repeat;
-	padding-left:220px;
-	height:160px;
   -webkit-border-radius: 4px;
      -moz-border-radius: 4px;
           border-radius: 4px;
@@ -2532,6 +2530,11 @@ table .span24 {
 {
 	padding-left:120px;
 	height:60px;
+}
+.larger
+{
+	padding-left:180px;
+	height:120px;
 }
 .well {
   min-height: 20px;
