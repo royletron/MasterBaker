@@ -1,0 +1,12 @@
+.row-fluid
+  .span12
+    .well
+      %h1 Competitions
+      %table.table.table-striped
+        %thead
+          %tr
+            %th Name
+        - @competitions.each do |comp|
+          %tr
+            %th 
+              =comp[:name]

@@ -7,8 +7,8 @@ MasterBaker::Application.routes.draw do
   
   match '/confirm/account', :to => 'confirm#account'
   
-  resource :user
-  
+  resources :users
+  resources :competitions
   resources :sessions, :only => [:new, :create, :destroy]
   match '/signin',  :to => 'sessions#new'
   match '/signout', :to => 'sessions#destroy'

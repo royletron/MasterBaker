@@ -11,7 +11,27 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20120714123643) do
+ActiveRecord::Schema.define(:version => 20120714210509) do
+
+  create_table "competitions", :force => true do |t|
+    t.string   "name"
+    t.string   "pagecontent"
+    t.datetime "startdate"
+    t.datetime "enddate"
+    t.datetime "created_at",  :null => false
+    t.datetime "updated_at",  :null => false
+  end
+
+  create_table "heats", :force => true do |t|
+    t.string   "name"
+    t.string   "pagecontent"
+    t.string   "picture_file_name"
+    t.string   "picture_content_type"
+    t.integer  "picture_file_size"
+    t.datetime "picture_updated_at"
+    t.datetime "created_at",           :null => false
+    t.datetime "updated_at",           :null => false
+  end
 
   create_table "users", :force => true do |t|
     t.string   "name"

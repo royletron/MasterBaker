@@ -36,6 +36,10 @@
                 %li
                   %a{:href => user_path(:id=>current_user.id)}
                     Profile
+                -if current_user.god == true
+                  %li
+                    %a{:href => competitions_path}
+                      Competitions
                 %li
                   %a{:href => signout_path} 
                     Log out
