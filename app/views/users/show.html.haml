@@ -6,8 +6,12 @@
           .well.visible-phone{:style => "background-image:url(#{current_user.avatar.url(:thumb)});padding-left:120px;height:60px"}
             %h1
               =@user.name
+            %p
+              =@user.wittering
           .well.hidden-phone{:style => "background-image:url(#{current_user.avatar.url(:medium)});padding-left:180px;height:120px"}
             %h1
               =@user.name
+            %p
+              =@user.wittering
         .span4
           .well

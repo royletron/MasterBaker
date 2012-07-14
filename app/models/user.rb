@@ -1,7 +1,7 @@
 require 'digest'
 class User < ActiveRecord::Base
   attr_accessor :password
-  attr_accessible :name, :email, :username, :admin, :superadmin, :god, :password, :password_confirmation, :avatar
+  attr_accessible :name, :email, :username, :admin, :superadmin, :god, :password, :password_confirmation, :avatar, :wittering
   
   has_attached_file :avatar, :styles => { :medium => "160x160>", :thumb => "100x100>", :tiny => "40x40>" }, 
                     :storage => :s3,
