@@ -15,7 +15,7 @@
 	overflow: hidden;
 	width: 40px;
 	height: 40px;
-	border: 1;
+	border: 1px solid rgba(0, 0, 0, 0.3);
 }
 .user-large
 {
