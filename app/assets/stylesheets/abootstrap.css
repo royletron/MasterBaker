@@ -24,12 +24,10 @@
 	background-position: 50% 50%;
 	background-repeat: no-repeat;
 	background-size: cover;
-	border: 1px solid rgba(255, 255, 255, 0.7);
 	display: block;
 	-moz-border-radius: 80px;
 	-webkit-border-radius: 80px;
 	border-radius: 80px;
-	position: absolute;
 	top: 0;
 	left: 0;
 	width: 158px;
