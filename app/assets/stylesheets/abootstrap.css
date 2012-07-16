@@ -21,13 +21,13 @@
 .user-large
 {
 	float:left;
-	-moz-border-radius: 82px;
-	-webkit-border-radius: 82px;
-	border-radius: 82px;
+	-moz-border-radius: 80px;
+	-webkit-border-radius: 80px;
+	border-radius: 80px;
 	border: 2px solid rgba(0, 0, 0, 0.3);
 	overflow: hidden;
-	width: 160px;
-	height: 160px;
+	width: 158px;
+	height: 158px;
 }
 
 article,

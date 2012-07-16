@@ -15,8 +15,7 @@
               %p
                 =@user.wittering
           .hidden-phone
-            .user-large{:style => "margin-right:20px"}
-              =image_tag @user.avatar.url(:medium)
+            .user-large{:style => "margin-right:20px; background-image: url('#{@user.avatar.url(:medium)}')"}
             %h1
               =@user.name
             %blockquote
