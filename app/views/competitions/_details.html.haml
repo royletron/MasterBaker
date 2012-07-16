@@ -8,5 +8,6 @@
         =f.input :name, :input_html => { :class=>"input-large" }, :title=>"Name", :placeholder=>"Your real name!"
         =f.input :startdate, :as => :datepicker
         =f.input :enddate, :as => :datepicker
+        =f.input :pagecontent, :as => :ckeditor
         .form-actions
           =submit_tag "Create Competition", :class => "btn btn-primary"

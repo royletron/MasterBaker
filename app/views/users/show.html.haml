@@ -12,7 +12,7 @@
                 =image_tag @user.avatar.url(:thumb)
               %h1
                 =@user.username
-              %blockquote
+              %blockquote{:style => "margin-bottom:8px"}
                 %p
                   =@user.wittering
           .hidden-phone

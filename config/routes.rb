@@ -1,5 +1,8 @@
 MasterBaker::Application.routes.draw do
 
+
+  mount RedactorRails::Engine => '/redactor_rails'
+
   match '/contact', :to => 'pages#contact'
   match '/about', :to => 'pages#about'
   match '/help', :to => 'pages#help'
