@@ -8,7 +8,7 @@
         .span8
           .visible-phone
             .user-small{:style => "margin-right:10px"}
-              %img{:href => "#{@user.avatar.url(:thumb)}"}
+              =image_tag @user.avatar.url(:thumb)
             %h1
               =@user.name
             %blockquote
@@ -16,7 +16,7 @@
                 =@user.wittering
           .hidden-phone
             .user-large{:style => "margin-right:20px"}
-              %img{:href => "#{@user.avatar.url(:thumb)}"}
+              =image_tag @user.avatar.url(:medium)
             %h1
               =@user.name
             %blockquote
