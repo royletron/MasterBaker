@@ -1,9 +1,15 @@
 require 'digest'
 class User < ActiveRecord::Base
   attr_accessor :password
-  attr_accessible :name, :email, :username, :admin, :superadmin, :god, :password, :password_confirmation, :avatar, :wittering
+  attr_accessible :name, :email, :username, :admin, :superadmin, :god, :password, :password_confirmation, :avatar, :cover, :wittering
   
   has_attached_file :avatar, :styles => { :medium => "160x160>", :thumb => "100x100>", :tiny => "40x40>" }, 
+                    :storage => :s3,
+                    :bucket         => ENV['S3_BUCKET'],
+                    :s3_credentials => { :access_key_id     => ENV['AWS_ACCESS_KEY_ID'], 
+                                         :secret_access_key => ENV['AWS_SECRET_ACCESS_KEY'] }
+
+  has_attached_file :cover, :styles => { :normal => "1900x400>" }, 
                     :storage => :s3,
                     :bucket         => ENV['S3_BUCKET'],
                     :s3_credentials => { :access_key_id     => ENV['AWS_ACCESS_KEY_ID'], 
