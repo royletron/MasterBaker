@@ -17,6 +17,8 @@ gem 'formtastic-bootstrap', :git => 'https://github.com/niedfelj/formtastic-boot
 gem "mysql2", "~> 0.3.11"
 gem "mysql"
 
+gem 'jquery-rails'
+gem 'jquery-ui-rails'
 # Gems used only for assets and not required
 # in production environments by default.
 group :assets do
@@ -26,8 +28,6 @@ group :assets do
   # See https://github.com/sstephenson/execjs#readme for more supported runtimes
 
   gem 'uglifier', '>= 1.0.3'
-  gem 'jquery-rails'
-  gem 'jquery-ui-rails'
 end
 
 group :development do
