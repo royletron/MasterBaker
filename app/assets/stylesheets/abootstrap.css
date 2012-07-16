@@ -8,6 +8,18 @@
  * Designed and built with all the love in the world @twitter by @mdo and @fat.
  */
 
+.user-small
+{
+	border-radius: 20px;
+	overflow: hidden;
+	width: 40px;
+	height: 40px;
+}
+.user-large
+{
+
+}
+
 article,
 aside,
 details,
