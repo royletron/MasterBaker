@@ -6,7 +6,17 @@
         %thead
           %tr
             %th Name
+            %th Start Date
+            %th End Date
         - @competitions.each do |comp|
           %tr
             %th 
               =comp[:name]
+            %th
+              =comp[:startdate].try(:strftime,'%d/%m/%Y')
+            %th
+              =comp[:enddate].try(:strftime,'%d/%m/%Y')
+             
+      %a.btn.btn-success.pull-right{:href => new_competition_path}
+        %i.icon-pencil.icon-white
+      %div{:style => "clear:both"}

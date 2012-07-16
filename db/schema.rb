@@ -16,8 +16,8 @@ ActiveRecord::Schema.define(:version => 20120714210509) do
   create_table "competitions", :force => true do |t|
     t.string   "name"
     t.string   "pagecontent"
-    t.datetime "startdate"
-    t.datetime "enddate"
+    t.date     "startdate"
+    t.date     "enddate"
     t.datetime "created_at",  :null => false
     t.datetime "updated_at",  :null => false
   end

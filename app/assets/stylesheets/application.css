@@ -1,1 +1,12 @@
 *= require formtastic-bootstrap
+.user-small
+{
+	border-radius: 20px;
+	overflow: hidden;
+	width: 40px;
+	height: 40px;
+}
+.user-large
+{
+	
+}

@@ -1,0 +1,1 @@
+web: bundle exec webbrick -p $PORT -c ./config/application.rb

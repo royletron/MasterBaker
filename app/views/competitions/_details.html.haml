@@ -1,0 +1,12 @@
+.row-fluid
+  .span12
+    .well
+      - if @competition.errors.any? 
+        %p.errors
+          Problems!
+      =semantic_form_for @competition, {:url=> @competition.new_record? ? competitions_path : competition_path(@competition), :method=> @competition.new_record? ? "post" : "put", :html => { :class => "form-horizontal"} } do |f|
+        =f.input :name, :input_html => { :class=>"input-large" }, :title=>"Name", :placeholder=>"Your real name!"
+        =f.input :startdate, :as => :datepicker
+        =f.input :enddate, :as => :datepicker
+        .form-actions
+          =submit_tag "Create Competition", :class => "btn btn-primary"

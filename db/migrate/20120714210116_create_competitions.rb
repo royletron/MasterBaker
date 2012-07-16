@@ -3,8 +3,8 @@ class CreateCompetitions < ActiveRecord::Migration
     create_table :competitions do |t|
       t.string :name
       t.string :pagecontent
-      t.column :startdate, :datetime
-      t.column :enddate, :datetime
+      t.column :startdate, :date
+      t.column :enddate, :date
 
       t.timestamps
     end
