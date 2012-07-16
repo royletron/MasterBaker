@@ -29,7 +29,7 @@
                 =render :partial => '/layouts/standardpages'
             %li.dropdown.pull-right
               %a.dropdown-toggle{:href=>"#", "data-toggle"=>"dropdown"}
-                .user-small
+                %span.user-small
                   =image_tag current_user.avatar.url(:tiny)
                 =current_user.username
                 %b.caret
