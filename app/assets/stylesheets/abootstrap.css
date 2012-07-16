@@ -39,10 +39,11 @@
 	-moz-border-radius: 80px;
 	-webkit-border-radius: 80px;
 	border-radius: 80px;
-	border: 2px solid rgba(0, 0, 0, 0.3);
 	overflow: hidden;
 	width: 158px;
 	height: 158px;
+  border: 2px solid rgba(0, 0, 0, 0.05);
+	
 }
 
 article,
