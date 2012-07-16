@@ -11,7 +11,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20120714210509) do
+ActiveRecord::Schema.define(:version => 20120716141928) do
 
   create_table "competitions", :force => true do |t|
     t.string   "name"
@@ -52,6 +52,10 @@ ActiveRecord::Schema.define(:version => 20120714210509) do
     t.integer  "avatar_file_size"
     t.datetime "avatar_updated_at"
     t.string   "wittering"
+    t.string   "cover_file_name"
+    t.string   "cover_content_type"
+    t.integer  "cover_file_size"
+    t.datetime "cover_updated_at"
   end
 
 end

@@ -1,30 +1,41 @@
+-content_for :header do
+  :css
+    body{background:white;}
 -content_for :noncontent do
   .profile
     #content.container
       .row-fluid
         .span8
-          %h1.visible-phone
-            =@user.name
-          .well.visible-phone{:style => "background-image:url(#{current_user.avatar.url(:thumb)});padding-left:120px;height:60px"}
-            %p
-              =@user.wittering
-          .well.hidden-phone{:style => "background-image:url(#{current_user.avatar.url(:medium)});padding-left:180px;height:120px"}
+          .visible-phone
+            .user-small{:style => "margin-right:10px"}
+              %img{:href => "#{current_user.avatar.url(:thumb)}"}
             %h1
               =@user.name
-            %p
-              =@user.wittering
+            %blockquote
+              %p
+                =@user.wittering
+          .hidden-phone
+            .user-large{:style => "margin-right:20px"}
+              %img{:href => "#{current_user.avatar.url(:medium)}"}
+            %h1
+              =@user.name
+            %blockquote
+              %p
+                =@user.wittering
         .span4
-          .well
-            %h1 Actions
-            %p
-              %a{:href => edit_user_path(:id=>current_user.id)}
-                %i.icon-pencil
-                Update your profile
-            %p
-              %a{:href => "cake"}
-                %i.icon-fire
-                Join a competition
-            %p
-              %a{:href => "cake"}
-                %i.icon-fire
-                Create your cake
+          .well{:style => "padding:8px 0"}
+            %ul.nav.nav-list
+              %li.nav-header
+                %h1 Actions
+              %li
+                %a{:href => edit_user_path(:id=>current_user.id)}
+                  %i.icon-pencil
+                  Update your profile
+              %li
+                %a{:href => "cake"}
+                  %i.icon-fire
+                  Join a competition
+              %li
+                %a{:href => "cake"}
+                  %i.icon-fire
+                  Create your cake

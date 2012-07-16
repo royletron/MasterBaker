@@ -11,6 +11,8 @@
 .user-small
 {
 	float:left;
+	-moz-border-radius: 20px;
+	-webkit-border-radius: 20px;
 	border-radius: 20px;
 	overflow: hidden;
 	width: 40px;
@@ -18,7 +20,14 @@
 }
 .user-large
 {
-
+	float:left;
+	-moz-border-radius: 82px;
+	-webkit-border-radius: 82px;
+	border-radius: 82px;
+	border: 2px solid rgba(0, 0, 0, 0.3);
+	overflow: hidden;
+	width: 160px;
+	height: 160px;
 }
 
 article,
@@ -186,8 +195,8 @@ body {
 	position:absolute;
 	width:100%;
 	z-index:-1;
-	margin-top:-20px;
-	padding-top:40px;
+	margin-top:-25px;
+	padding-top:25px;
   background: url(/assets/profile-tile.png) center bottom repeat-x;
 	color:black;
 }

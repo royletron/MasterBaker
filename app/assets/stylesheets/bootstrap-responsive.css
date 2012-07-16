@@ -58,6 +58,14 @@
 }
 
 @media (max-width: 767px) {
+	.profile{
+		margin-left:-20px;
+	}
+	
+	.profile .container{
+		padding-left:20px;
+		padding-right:20px;
+	}
   .visible-phone {
     display: inherit !important;
   }
@@ -164,8 +172,8 @@
     width: 100%;
   }
 	.profile .container{
-		margin-left:20px;
-		margin-right:20px;
+		margin-left:auto;
+		margin-right:auto;
 	}
   .row,
   .thumbnails {
@@ -203,14 +211,18 @@
 }
 
 @media (min-width: 768px) and (max-width: 979px) {
+
+	.profile
+	{
+		margin-left: 0px;
+	}
   .row {
     margin-left: -20px;
     *zoom: 1;
   }
-	
 	.profile .container{
-		margin-left:20px;
-		margin-right:20px;
+		margin-left:auto;
+		margin-right:auto;
 	}
   .row:before,
   .row:after {

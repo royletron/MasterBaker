@@ -34,7 +34,8 @@
   %body
     = render :partial => "layouts/header"
     
-    
+
+    = yield :noncontent
     =render :partial =>"shared/warning"
     =render :partial =>"shared/notice"
     #content.container

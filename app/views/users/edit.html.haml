@@ -1,3 +1,22 @@
+-content_for :header do
+  :javascript
+    function checkupload()
+    {
+      
+    }
+    $(document).ready(function(){
+        $('#user_avatar').change(function() { 
+          var filename = $('#user_avatar').val();
+          if(filename.split(".").length > 0)
+          {
+            var fileext = filename.split(".")[1];
+            if((fileext == "jpeg") || (fileext == "jpg") || (fileext == "gif") || (fileext == "png"))
+            {
+              $('#edit_user_2').submit();
+            }
+          }
+        });
+    });
 .row-fluid
   .span5
     .hero-unit
@@ -16,7 +35,8 @@
       =f.input :name, :input_html => { :class=>"input-large" }, :title=>"Name", :placeholder=>"Your real name!"
       =f.input :username, :input_html => { :class=>"input-large" }, :title=>"Nickname", :placeholder=>"You can change it later"
       =f.input :wittering, :input_html => {:class=>"input-large", :title=>"Wittering", :placeholder=>"A little statement"}
-      =f.input :avatar
           
       .form-actions
         =submit_tag "Update me!", :class => "btn btn-primary"
+    =semantic_form_for @user, {:url => user_path(@user), :method => "put", :html => {:class =>"form-horizontal"}} do |p|
+      =p.input :avatar, :html => { :id => "picture_upload"}
