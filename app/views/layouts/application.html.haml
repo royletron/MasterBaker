@@ -17,8 +17,6 @@
     %link{:rel=>"icon", :href=>"/assets/favicon.ico", :type=>"image/x-icon"}
     %link{:rel=>"shortcut icon", :href=>"/assets/favicon.ico", :type=>"image/x-icon"}
     %link{:type=>"text/css", :href=>"/assets/jquery-ui-1.8.21.custom.css", :rel=>"stylesheet"}
-    
-    = yield :header
 
     - if ENV["RAILS_ENV"] != "production"
       = stylesheet_link_tag "abootstrap"
@@ -28,7 +26,9 @@
       = javascript_include_tag "bootstrap.min.js"
       = yield :javascript
 
+    
 
+    = yield :header
     = csrf_meta_tags
   
   %body

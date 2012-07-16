@@ -1,8 +1,8 @@
 -content_for :header do
   :css
-    body{background:white;}
+    body{background: url(/assets/profile-tile.png) center bottom; background-size:auto}
 -content_for :noncontent do
-  .profile
+  .profile{:style => "background-image: url('#{@user.cover.url(:normal)}')"}
     #content.container
       .row-fluid
         .span8
@@ -10,17 +10,17 @@
             .user-small{:style => "margin-right:10px"}
               =image_tag @user.avatar.url(:thumb)
             %h1
-              =@user.name
+              =@user.username
             %blockquote
               %p
                 =@user.wittering
           .hidden-phone
             .user-large{:style => "margin-right:20px"}
               %b{:style => "background-image: url('#{@user.avatar.url(:medium)}')"}
-            %h1
-              =@user.name
-            %blockquote
-              %p
+            %div{:style=> "display:table-cell; vertical-align:middle; height:160px"}
+              %h1
+                =@user.username
+              %p{:style => "font-size:16px;"}
                 =@user.wittering
         .span4
           .well{:style => "padding:8px 0"}

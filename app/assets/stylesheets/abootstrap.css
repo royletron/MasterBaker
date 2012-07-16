@@ -212,8 +212,11 @@ body {
 	z-index:-1;
 	margin-top:-25px;
 	padding-top:25px;
-  background: url(/assets/profile-tile.png) center bottom repeat-x;
+	background-color:white;
 	color:black;
+	padding-bottom:20px;
+  -moz-background-size: cover;
+  background-size: cover;
 }
 
 a {
